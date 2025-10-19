@@ -11,51 +11,57 @@
     <header class="header">
       <div class="header__container">
         <div class="header__logo-container">
-          <img class="header__logo" src="./img/logo.png" />
+          <a href = "index.html">
+            <img class="header__logo" src="./img/logo.png" />
+          </a>
         </div>
         <nav class="header__nav">
           <ul class="header__list">
             <li class="header__list-item">
-              <a class="header__link" href="./about">About</a>
+              <a class="header__link" href="./about.html">About</a>
             </li>
             <li class="header__list-item">
-              <a class="header__link" href="./what-we-serve">What we Serve</a>
+              <a class="header__link" href="./what-we-serve.html">What we Serve</a>
             </li>
             <li class="header__list-item">
-              <a class="header__link" href="./follow-us">Follow Us!</a>
+              <a class="header__link active" href="./follow-us.html">Follow Us!</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <main class="main">
-      <section class="follow">
-        <div class="follow__container">
-          <h1 class="follow__heading">follow us on social media!</h1>
-          <nav class="follow__nav">
-            <ul class="follow__list">
-              <li class="follow__list-item">
-                <a class="follow__link">
-                  <img class="follow__platform" src="./img/facebook.svg" />
-                  <span class="follow__link-text">manafeastna!</span>
-                </a>
-              </li>
-              <li class="follow__list-item">
-                <a class="follow__link">
-                  <img class="follow__platform" src="./img/instagram.svg" />
-                  <span class="follow__link-text">mana.feast</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </section>
+<section class="follow">
+  <div class="follow__container">
+    <h1 class="follow__heading">follow us on social media!</h1>
+    <div class="follow__content">
+      <img class="follow__image" src="./img/follow.png" alt="Follow us image left" />
+      
+      <ul class="follow__list">
+        <li class="follow__list-item">
+          <a class="follow__link">
+            <img class="follow__platform" src="./img/facebook.svg" />
+            <span class="follow__link-text">manafeastna!</span>
+          </a>
+        </li>
+        <li class="follow__list-item">
+          <a class="follow__link">
+            <img class="follow__platform" src="./img/instagram.svg" />
+            <span class="follow__link-text">mana.feast</span>
+          </a>
+        </li>
+      </ul>
+
+      <img class="follow__agnes" src="./img/agnes-standing.png" alt="agnes-tachyon" />
+    </div>
+  </div>
+</section>
       <section class="contact">
         <div class="contact__container">
           <h2 class="contact__heading">got any concerns? more dish ideas? want updates? contact us and register!</h2>
           <form class="contact__form">
             <input class="contact__input" type="email" placeholder="email" />
-            <input class="contact__input" type="text" placeholder="text" />
+            <input class="contact__input" type="text" placeholder="type your thoughts here..." />
             <button class="contact__submit" type="submit">submit</button>
           </form>
         </div>
