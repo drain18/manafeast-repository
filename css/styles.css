@@ -4,7 +4,7 @@
   --color-background: #fbf9e4;
   --color-secondary: #d9d8d9;
   --color-surface: #e4c395;
-  --color-foreground: ##000000;
+  --color-foreground: #000000;
   --font-dongle: "Dongle", sans-serif;
   --font-league-spartan: "League Spartan", sans-serif;
 }
@@ -12,7 +12,6 @@
 * {
   padding: 0;
   margin: 0;
-  gap: 0;
   font-family: var(--font-dongle);
   box-sizing: border-box;
 }
@@ -33,12 +32,12 @@ li {
   list-style-type: none;
 }
 
+/* header */
 .header {
   width: 100%;
   display: flex;
+  flex-direction: column;
 }
-
-
 
 .header__container {
   width: 100%;
@@ -64,24 +63,29 @@ li {
 .header__nav {
   width: 100%;
   display: flex;
+  flex-direction: column;
   background-color: var(--color-background);
-  padding: 1rem;
+  padding: 3rem;
 }
 
 .header__list {
   width: 100%;
   display: flex;
   justify-content: space-around;
-}
-
-.header__list-item {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .header__link {
-  font-size: 36px;
+  font-size: 50px;
+}
+
+/* nav option is underlined when active */
+.header__link.active {
+  text-decoration: underline;
+  text-underline-offset: 6px; 
+  text-decoration-thickness: 2px; 
+  text-decoration-color: black; 
 }
 
 /* hero */
@@ -127,19 +131,8 @@ li {
   z-index: 0;
 }
 
-.hero__text-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  gap: 1rem;
-}
-
 .hero__text {
   font-size: 36px;
-}
-
-.hero__text-center {
   text-align: center;
 }
 
@@ -152,10 +145,10 @@ li {
 .hero__button-group {
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  margin-top: -2rem;
 }
 
 .hero__button {
@@ -177,7 +170,6 @@ li {
   min-height: 100vh;
   background-color: var(--color-background);
   overflow: hidden;
-  text-align: center;
   padding: 4rem 2rem;
   margin-bottom: 8rem;
   margin-top: -1rem;
@@ -193,7 +185,7 @@ li {
   background-image: url(../img/opera\ and\ oguri\ eating.png);
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   opacity: 0.35;
   z-index: 0;
 }
@@ -201,10 +193,10 @@ li {
 .about__container {
   position: relative;
   z-index: 1;
-  max-width: 900px;    
+  max-width: 900px;
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: flex-start;
 }
 
 .about__container .hero__text {
@@ -212,10 +204,10 @@ li {
   text-align: left;
   color: black;
   font-family: var(--font-dongle);
-  line-height: 1.3; 
+  line-height: 1.3;
 }
 
-/* what we serve */
+/* what-we-serve page */
 .serve {
   background-color: var(--color-surface);
   padding: 4rem 2rem;
@@ -274,7 +266,7 @@ li {
   font-family: var(--font-dongle);
 }
 
-/* follow us */
+/* follow-us page */
 .follow {
   background-color: var(--color-surface);
   padding: 4rem 2rem;
@@ -309,21 +301,16 @@ li {
 }
 
 .follow__image {
-  width: 400px;
+  width: 350px;
   height: auto;
   border-radius: 10px;
-}
-
-.follow__agnes {
-  width: 200px;
-  height: auto;
 }
 
 .follow__list {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .follow__list-item {
@@ -342,39 +329,7 @@ li {
   font-size: 36px;
 }
 
-/* Responsive layout for smaller screens */
-@media (max-width: 900px) {
-  .follow__content {
-    flex-direction: column;
-  }
-
-  .follow__image {
-    width: 300px;
-  }
-}
-
-
-/* Make it adjust nicely on smaller screens */
-@media (max-width: 768px) {
-  .follow__content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .follow__image {
-    width: 300px;
-  }
-
-  .follow__heading {
-    text-align: center;
-  }
-
-  .follow__list {
-    align-items: center;
-  }
-}
-
-/* contact section */
+/* contact */
 .contact {
   background-color: var(--color-background);
   padding: 4rem 2rem;
@@ -422,23 +377,122 @@ li {
   background-color: #c7c6c7;
 }
 
+/* -responsive- */
 
-@media only screen and (min-width: 640px) {
-  .hero {
-    background-size: cover;
-    background-position: center;
-    height: 600px;
+/* tablet view */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header__link {
+    font-size: 35px;
   }
 
-  .hero__container {
-    justify-content: center;
+  .hero__heading {
+    font-size: 40px;
   }
 
-  .hero__button-group {
-    flex-direction: row;
+  .hero__text {
+    font-size: 28px;
+  }
+
+  .follow__image {
+    width: 280px;
+  }
+
+  .follow__link-text {
+    font-size: 30px;
   }
 }
 
+/* mobile view */
+@media (max-width: 768px) {
+  .header__list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero {
+    padding: 1.5rem;
+    min-height: 80vh;
+  }
+
+  .hero__heading {
+    font-size: 32px;
+  }
+
+  .hero__text {
+    font-size: 24px;
+  }
+
+  .hero__button {
+    font-size: 28px;
+  }
+
+  .about {
+    padding: 2rem 1rem;
+  }
+
+  .about__container .hero__text {
+    font-size: 24px;
+  }
+
+  .serve__text {
+    font-size: 32px;
+  }
+
+  .serve__list {
+    grid-template-columns: 1fr;
+  }
+
+  .follow__content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .follow__image {
+    width: 250px;
+  }
+
+  .follow__heading {
+    font-size: 28px;
+  }
+
+  .follow__link-text {
+    font-size: 28px;
+  }
+
+  .contact__input {
+    width: 90%;
+  }
+
+  .contact__submit {
+    width: 120px;
+    font-size: 18px;
+  }
+}
+
+/* extra small screens */
+@media (max-width: 480px) {
+  .hero__heading {
+    font-size: 28px;
+  }
+
+  .hero__text {
+    font-size: 20px;
+  }
+
+  .follow__image {
+    width: 200px;
+  }
+
+  .follow__link-text {
+    font-size: 24px;
+  }
+
+  .serve__text {
+    font-size: 28px;
+  }
+}
+
+/* optimize for desktop */
 @media only screen and (min-width: 1080px) {
   .header__container {
     flex-direction: row;
@@ -453,10 +507,6 @@ li {
     width: 250px;
   }
 
-  .header__nav {
-    padding: 0;
-  }
-  
   .hero {
     height: 900px;
   }
