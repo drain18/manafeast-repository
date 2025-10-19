@@ -274,7 +274,153 @@ li {
   font-family: var(--font-dongle);
 }
 
+/* follow us */
+.follow {
+  background-color: var(--color-surface);
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.follow__container {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.follow__heading {
+  font-family: var(--font-league-spartan);
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.follow__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.follow__image {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.follow__agnes {
+  width: 200px;
+  height: auto;
+}
+
+.follow__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.follow__list-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.follow__platform {
+  width: 40px;
+  height: auto;
+}
+
+.follow__link-text {
+  font-family: var(--font-dongle);
+  font-size: 36px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 900px) {
+  .follow__content {
+    flex-direction: column;
+  }
+
+  .follow__image {
+    width: 300px;
+  }
+}
+
+
+/* Make it adjust nicely on smaller screens */
+@media (max-width: 768px) {
+  .follow__content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .follow__image {
+    width: 300px;
+  }
+
+  .follow__heading {
+    text-align: center;
+  }
+
+  .follow__list {
+    align-items: center;
+  }
+}
+
+/* contact section */
+.contact {
+  background-color: var(--color-background);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.contact__heading, .follow__heading {
+  font-family: var(--font-league-spartan);
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact__input {
+  width: 400px;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--color-secondary);
+  font-size: 20px;
+}
+
+.contact__submit {
+  width: 150px;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--color-secondary);
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact__submit:hover {
+  background-color: #c7c6c7;
+}
 
 
 @media only screen and (min-width: 640px) {
